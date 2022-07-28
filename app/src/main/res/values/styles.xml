@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorPrimaryDark">#3CA55C</item>
+        <item name="colorPrimary">#3CA55C</item>
+        <item name="colorAccent">#E5E5BE</item>
+        <item name="android:textColorPrimary">@color/fontcol1</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,328 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/bg_grad"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <LinearLayout
+        android:visibility="visible"
+        android:padding="10dp"
+        android:id="@+id/body"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="WATER"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:textColor="#fff" />
+
+                <RadioGroup
+                    android:id="@+id/grp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/btn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:text="ON"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/btn2"
+                        android:checked="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:text="OFF"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:id="@+id/gauge"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <pl.pawelkleczkowski.customgauge.CustomGauge
+                    android:id="@+id/gauge1"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    app:gaugeEndValue="5"
+                    app:gaugePointEndColor="#fff"
+                    app:gaugePointSize="5"
+                    app:gaugePointStartColor="#fff"
+                    app:gaugeStartAngle="135"
+                    app:gaugeStartValue="0"
+                    app:gaugeStrokeCap="ROUND"
+                    app:gaugeStrokeColor="@color/md_grey_400"
+                    app:gaugeStrokeWidth="10dp"
+                    app:gaugeSweepAngle="270" />
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="45dp"
+                    android:text="SALINITY"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView"
+                    android:layout_centerHorizontal="true"
+                    android:text="0°"
+                    android:textColor="#5b5858"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:id="@+id/gaugex"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <pl.pawelkleczkowski.customgauge.CustomGauge
+                    android:id="@+id/gauge2"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    app:gaugeEndValue="100"
+                    app:gaugePointEndColor="@color/md_blue_800"
+                    app:gaugePointSize="5"
+                    app:gaugePointStartColor="@color/md_blue_300"
+                    app:gaugeStartAngle="135"
+                    app:gaugeStartValue="0"
+                    app:gaugeStrokeCap="ROUND"
+                    app:gaugeStrokeColor="@color/md_grey_400"
+                    app:gaugeStrokeWidth="10dp"
+                    app:gaugeSweepAngle="270" />
+
+                <TextView
+                    android:id="@+id/textViewx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:paddingTop="45dp"
+                    android:text="HUMIDITY"
+                    android:textColor="#fff"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_below="@+id/textViewx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="0°"
+                    android:textSize="30dp"
+                    android:textColor="#5b5858"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/gaugexx"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <pl.pawelkleczkowski.customgauge.CustomGauge
+                android:id="@+id/gauge3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:padding="20dp"
+                app:gaugeDividerColor="@color/md_yellow_500"
+                app:gaugeDividerDrawFirst="true"
+                app:gaugeDividerDrawLast="true"
+                app:gaugeDividerSize="1"
+                app:gaugeDividerStep="10"
+                app:gaugeEndValue="50"
+                app:gaugePointEndColor="@color/md_green_500"
+                app:gaugePointStartColor="@color/md_red_500"
+                app:gaugeStartAngle="180"
+                app:gaugeStartValue="0"
+                app:gaugeStrokeCap="BUTT"
+                app:gaugeStrokeColor="@color/md_grey_400"
+                app:gaugeStrokeWidth="20dp"
+                app:gaugeSweepAngle="180" />
+
+            <TextView
+                android:id="@+id/textViewxx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="60dp"
+                android:text="TEMPERTURE"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_below="@+id/textViewxx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="0°"
+                android:textColor="#5b5858"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:paddingTop="150dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:text="VIBRATOR"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+                <RadioGroup
+                    android:id="@+id/grp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/btn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text="ON"
+                        android:textColor="@color/fontcol1"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/btn4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="OFF"
+                        android:textColor="@color/fontcol1"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="visible"
+        android:layout_below="@id/body"
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_login"
+        android:text="REFRESH"
+        android:textColor="#a8a8a8"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:layout_gravity="center"/>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Ali shop"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
